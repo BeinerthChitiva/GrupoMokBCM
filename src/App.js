@@ -57,7 +57,7 @@ function App() {
         orderCountry={orderCountry}
         setOrderCountry={setOrderCountry}
       />
-      <Footer/>
+      {users.length > 0 && <Footer />}
     </div>
   );
 }

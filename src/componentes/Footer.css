@@ -6,9 +6,6 @@ footer{
     font-weight: 600;
     font-size: large;
     width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
 }
 
 footer span{

@@ -9,8 +9,8 @@ Luego creé la estructura del proyecto, que serían las carpetas de
 (componentes, imagenes, páginas...) pero este es un proyecto pequeño, así que sólo tiene la carpeta de componentes.
 Ahí inicié con el desarrollo del proyecto y los puntos pedidos.</p>
 
-👉 Live Demo: <a href='https'>Live Demo</a>
-👉 Mi Portafolio Web: <a href='https'>Live Demo</a>
+👉 Live Demo: <a href='https://beinerthchitivam-grupomok.vercel.app/'>Live Demo</a> <br>
+👉 Mi Portafolio Web: <a href='https://beinerthchitiva-portfolio.vercel.app/'>Live Demo</a>
 
 <h3>Proyecto Desarrollado Con:</h3>
 
