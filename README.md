@@ -1,9 +1,9 @@
-<div align='center'><img style="width:30%" src='h'/></div>
+<div align='center'><img style="width:30%" src='https://raw.githubusercontent.com/BeinerthChitiva/GrupoMokBCM/master/public/grupomok.jpg'/></div>
 
 <h2>Beinerth Chitiva M. - Prueba Técnica</h2>
 
-<p>Prueba Técnica desarrollada por <b>Beinerth Chitiva M.</b>
-para Grupo Mok. Inicié el creando la aplicación con npx-create-react-app. Luego eliminé el código boilerplate y
+<p>Prueba Técnica desarrollada por <b>Beinerth Chitiva M.</b> para Grupo Mok.</p>
+<p> Inicié el creando la aplicación con npx-create-react-app. Luego eliminé el código boilerplate y
 edité la metadata de la App (Título, Fonts, Favicon).
 Luego creé la estructura del proyecto, que serían las carpetas de
 (componentes, imagenes, páginas...) pero este es un proyecto pequeño, así que sólo tiene la carpeta de componentes.
