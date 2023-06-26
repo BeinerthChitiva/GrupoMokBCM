@@ -1,23 +1,63 @@
-import logo from './logo.svg';
 import './App.css';
+import FilterBar from './componentes/FilterBar';
+import Topbar from './componentes/Topbar';
+import Users from './componentes/Users';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import Footer from './componentes/Footer';
 
 function App() {
+
+  // User Fetching
+
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+      fetchUsers()
+  }, [])
+
+  async function fetchUsers(){
+      try{
+          const response = await axios.get("https://randomuser.me/api/?results=100")
+          const usersData = response.data.results
+          setUsers(usersData)
+      } catch (error){
+          console.error("Error fetching users: ", error)
+      }
+  }
+
+  // Color Rows State
+  const [isColored, setIsColored] = useState(false)
+
+  // Restore Users State
+  const [deletedUsers, setDeletedUsers] = useState([])
+
+  // Order By Country State
+  const [orderCountry, setOrderCountry] = useState(true)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Topbar/>
+      <FilterBar
+        users={users}
+        setUsers={setUsers}
+        isColored={isColored}
+        setIsColored={setIsColored}
+        deletedUsers={deletedUsers}
+        setDeletedUsers={setDeletedUsers}
+        orderCountry={orderCountry}
+        setOrderCountry={setOrderCountry}
+      />
+      <Users
+        users={users}
+        setUsers={setUsers}
+        isColored={isColored}
+        deletedUsers={deletedUsers}
+        setDeletedUsers={setDeletedUsers}
+        orderCountry={orderCountry}
+        setOrderCountry={setOrderCountry}
+      />
+      <Footer/>
     </div>
   );
 }
